@@ -135,8 +135,8 @@ menu:
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
-  icons: true
-  badges: false
+  icons: true # 菜单栏显示图标
+  badges: true  # 标签，分类，归档显示数量
 
 
 # ---------------------------------------------------------------
@@ -152,7 +152,7 @@ sidebar:
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
   # Pisces | Gemini: 240
-  #width: 300
+  # width: 300  # 菜单栏显示的宽度
 
   # Sidebar Display (only for Muse | Mist), available values:
   #  - post    expand on posts automatically. Default.
@@ -171,11 +171,11 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /images/avatar.jpg
   # If true, the avatar will be dispalyed in circle.
-  rounded: false
+  rounded: true #头像 圆形
   # If true, the avatar will be rotated with the cursor.
-  rotated: false
+  rotated: true # 头像 旋转
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
