@@ -10,7 +10,7 @@
 override: false
 
 # Console reminder if new version released.
-reminder: false
+reminder: false  # 在控制台提示有更新, 国内网络不稳定存在会报错 TODO
 
 # Allow to cache content generation. Introduced in NexT v6.0.0.
 cache:
@@ -37,29 +37,37 @@ custom_file_path:
 # ---------------------------------------------------------------
 # Site Information Settings
 # See: https://theme-next.org/docs/getting-started/
+# 图片存放在主题目录的source/images下面
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
+  small: /images/favicon-16x16.png
+  medium: /images/favicon-32x32.png
+  apple_touch_icon: /images/apple-touch-icon.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
 # Show multilingual switcher in footer.
-language_switcher: false
+language_switcher: false  #显示多语言
+
+
+# ---------------------------------------------------------------
+# Site Information Settings
+# See: https://muse.theme-next.org/docs/theme-settings/footer.html
+# 网站底部显示
+# ---------------------------------------------------------------
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  #since: 2015
+  since: 2017 #显示博客开始年份
 
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
     name: fa fa-heart
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true  # icon动起来
     # Change the color of icon, using Hex Code.
     color: "#ff0000"
 
@@ -67,29 +75,29 @@ footer:
   copyright:
 
   # Powered by Hexo & NexT
-  powered: true
+  powered: true  # 在页面最下面显示 由 Hexo & NexT.Pisces 强力驱动
 
   # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
-    enable: false
-    icp:
+    enable: true
+    icp: 蜀ICP备 19038127号-2
     # The digit in the num of gongan beian.
-    gongan_id:
+    gongan_id: 19038127
     # The full num of gongan beian.
     gongan_num:
     # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
-    gongan_icon_url:
+    gongan_icon_url: /images/beian.png
 
 # Creative Commons 4.0 International License.
-# See: https://creativecommons.org/share-your-work/licensing-types-examples
+# See: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
 # Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
-  license: by-nc-sa
-  sidebar: false
-  post: false
-  language:
+  license: by-nc-nd # https://creativecommons.org/licenses/ 查看各个值的含义
+  sidebar: true
+  post: true
+  language: deed.zh  #中文  英文：deed.en
 
 
 # ---------------------------------------------------------------
@@ -97,10 +105,10 @@ creative_commons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
-#scheme: Pisces
-#scheme: Gemini
+#scheme: Muse  # 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白
+#scheme: Mist # Muse 的紧凑版本，整洁有序的单栏外观
+scheme: Pisces # 双栏 Scheme，小家碧玉似的清新
+#scheme: Gemini # 和Pisces类似，但具有明显的阴影列栏，使其对视图更敏感
 
 # Dark Mode
 darkmode: false
@@ -117,9 +125,9 @@ darkmode: false
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  #about: /about/ || fa fa-user
-  #tags: /tags/ || fa fa-tags
-  #categories: /categories/ || fa fa-th
+  about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap

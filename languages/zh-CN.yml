@@ -31,10 +31,22 @@ post:
   views: 阅读次数
   related_posts: 相关文章
   copyright:
-    author: 本文作者
-    link: 本文链接
+    title: 本文标题
+    author:
+      content: 本文作者
+      title: "访问 %s 的个人博客"
+    link:
+      content: 本文链接
+      copy_title: 点击复制文章链接
+      success: 复制成功！
+    create_time: 
+      content: 发布时间
+      time_format: YYYY年MM月DD日 - HH:mm:ss
+    update_time: 
+      content: 最后更新
+      time_format: YYYY年MM月DD日 - HH:mm:ss
     license_title: 版权声明
-    license_content: "本博客所有文章除特别声明外，均采用 %s 许可协议。转载请注明出处！"
+    license_content: "本博客所有文章均采用 %s 许可协议。转载请保留原文链接及作者。"
 footer:
   powered: "由 %s 强力驱动"
   total_views: 总访问量

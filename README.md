@@ -101,54 +101,11 @@ We welcome you to join the development of NexT. Please see [contributing documen
 
 Also, we welcome Issue or PR to our [official-plugins][official-plugins-url].
 
-## Contributors
 
-[![][contributors-image]][contributors-url]
 
-## Thanks
 
-<p align="center">
-  «NexT» send special thanks to these great services that sponsor our core infrastructure:
-<br>
-<br>
-  <a href="https://github.com"><img align="center" width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png"></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://www.netlify.com"><img align="center" width="150" src="https://cdn.netlify.com/15ecf59b59c9d04b88097c6b5d2c7e8a7d1302d0/1b6d6/img/press/logos/full-logo-light.svg"></a>
-<br>
-<br>
-  <sub>GitHub allows us to host the Git repository, Netlify allows us to distribute the documentation.</sub>
-<br>
-<br>
-  <a href="https://crowdin.com"><img align="center" width="180" src="https://support.crowdin.com/assets/logos/crowdin-logo1-small.png"></a>
-<br>
-<br>
-  <sub>Crowdin allows us to translate conveniently the documentation.</sub>
-<br>
-<br>
-  <a href="https://codacy.com"><img align="center" width="155" src="https://user-images.githubusercontent.com/16944225/55026017-623f8f00-5002-11e9-88bf-0d6a5884c6c2.png"></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://travis-ci.com"><img align="center" width="140" src="https://raw.githubusercontent.com/travis-ci/travis-web/master/public/images/logos/TravisCI-Full-Color.png"></a>
-<br>
-<br>
-  <sub>Codacy allows us to monitor code quality, Travis CI allows us to run the test suite.</sub>
-</p>
 
-[docs-installation-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/INSTALLATION.md
-[docs-data-files-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/DATA-FILES.md
-[docs-update-5-1-x-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/UPDATE-FROM-5.1.X.md
+# swig引擎
 
-[t-news-url]: https://t.me/theme_next_news
-[t-chat-url]: https://t.me/theme_next
-[gitter-url]: https://gitter.im/theme-next
-[riot-url]: https://riot.im/app/#/room/#theme-next:matrix.org
-[i18n-url]: https://i18n.theme-next.org
-
-[awesome-next-url]: https://github.com/theme-next/awesome-next
-[issues-bug-url]: https://github.com/theme-next/hexo-theme-next/issues/new?assignees=&labels=Bug&template=bug-report.md
-[issues-feat-url]: https://github.com/theme-next/hexo-theme-next/issues/new?assignees=&labels=Feature+Request&template=feature-request.md
-[feat-req-vote-url]: https://github.com/theme-next/hexo-theme-next/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature+Request%22
-
-[contributing-document-url]: https://github.com/theme-next/hexo-theme-next/blob/master/.github/CONTRIBUTING.md
-[official-plugins-url]: https://github.com/theme-next
-[contributors-image]: https://opencollective.com/theme-next/contributors.svg?width=890
-[contributors-url]: https://github.com/theme-next/hexo-theme-next/graphs/contributors
+1. 从zh_CN.yml文件中引用变量：{{ __('post.copyright.link.success') }}
+2. 在方法中引用zh_CN.yml文件中的值：page.date.format(__('post.copyright.create_time.time_format'))
