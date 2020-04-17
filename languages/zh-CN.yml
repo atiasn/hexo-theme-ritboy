@@ -82,6 +82,9 @@ symbol:
   comma: "，"
   period: "。"
   colon: "："
+read_over:
+  end: 本文结束
+  thanks: 感谢您的阅读
 reward:
   donate: 打赏
   wechatpay: 微信支付

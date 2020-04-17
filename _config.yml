@@ -75,7 +75,7 @@ footer:
   copyright:
 
   # Powered by Hexo & NexT
-  powered: true  # 在页面最下面显示 由 Hexo & NexT.Pisces 强力驱动
+  powered: false  # 在页面最下面显示 由 Hexo & NexT.Pisces 强力驱动
 
   # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
@@ -94,7 +94,7 @@ footer:
 # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
-  license: by-nc-nd # https://creativecommons.org/licenses/ 查看各个值的含义
+  license: by-nc-sa # https://creativecommons.org/licenses/ 查看各个值的含义
   sidebar: true
   post: true
   language: deed.zh  #中文  英文：deed.en
@@ -107,8 +107,8 @@ creative_commons:
 # Schemes
 #scheme: Muse  # 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白
 #scheme: Mist # Muse 的紧凑版本，整洁有序的单栏外观
-scheme: Pisces # 双栏 Scheme，小家碧玉似的清新
-#scheme: Gemini # 和Pisces类似，但具有明显的阴影列栏，使其对视图更敏感
+#scheme: Pisces # 双栏 Scheme，小家碧玉似的清新
+scheme: Gemini # 和Pisces类似，但具有明显的阴影列栏，使其对视图更敏感
 
 # Dark Mode
 darkmode: false
@@ -129,9 +129,9 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  #schedule: /schedule/ || fa fa-calendar
-  #sitemap: /sitemap.xml || fa fa-sitemap
-  #commonweal: /404/ || fa fa-heartbeat
+  # schedule: /schedule/ || fa fa-calendar
+  # sitemap: /sitemap.xml || fa fa-sitemap
+  # commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -178,15 +178,15 @@ avatar:
   rotated: true # 头像 旋转
 
 # Posts / Categories / Tags in sidebar.
-site_state: true
+site_state: false
 
 # Social Links
 # Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  GitHub: https://github.com/ritboylei || fab fa-github
+  E-Mail: mailto:ritboylei@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -197,16 +197,16 @@ social:
   #Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
-  enable: true
-  icons_only: false
+  enable: true  # 社交栏显示
+  icons_only: true  # 只显示图标
   transition: false
 
 # Blog rolls
-links_settings:
+links_settings: # 在菜单栏连接显示
   icon: fa fa-link
   title: Links
   # Available values: block | inline
-  layout: block
+  layout: inline
 
 links:
   #Title: http://yoursite.com
@@ -227,8 +227,8 @@ toc:
 # A button to open designated chat widget in sidebar.
 # Firstly, you need enable the chat service you want to activate its sidebar button.
 chat:
-  enable: false
-  #service: chatra
+  enable: false   #聊天通信 https://theme-next.org/docs/third-party-services/chat-services#Chatra
+  # service: chatra
   #service: tidio
   icon: fa fa-comment # Icon name in Font Awesome, set false to disable icon.
   text: Chat # Button text, change it as you wish.
@@ -240,7 +240,7 @@ chat:
 # ---------------------------------------------------------------
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
+excerpt_description: false
 
 # Read more button
 # If true, the read more button will be displayed in excerpt section.
@@ -257,27 +257,33 @@ post_meta:
 
 # Post wordcount display settings
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
-symbols_count_time:
-  separated_meta: true
+symbols_count_time: # 文件字数和阅读时间
+  separated_meta: false   # 字数和时间换行
   item_text_post: true
-  item_text_total: false
+  item_text_total: true
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: false
+tag_icon:
+  enable: true  #文章底部标签显示符合 默认: fa fa-tag
+  icon: fa fa-tag
 
 # Reward (Donate)
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, reward will be displayed in every article by default.
-  enable: false
-  animation: false
+  enable: true
+  animation: true
   #comment: Donate comment here.
 
-reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+reward: # 打赏
+  wechatpay: /images/wechatpay.png
+  alipay: /images/alipay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
+
+read_over:
+  enable: true    # 阅读结束提示
+  icon: fa fa-paw
 
 # Subscribe through Telegram Channel, Twitter, etc.
 # Usage: `Key: permalink || icon` (Font Awesome)
@@ -290,15 +296,15 @@ follow_me:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: false
-  title: # Custom header, leave empty to use the default one
+  enable: true
+  title: 推荐阅读 # Custom header, leave empty to use the default one
   display_in_home: false
   params:
     maxCount: 5
     #PPMixingRate: 0.0
     #isDate: false
     #isImage: false
-    #isExcerpt: false
+    isExcerpt: false
 
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
@@ -309,7 +315,7 @@ post_edit:
 
 # Show previous post and next post in post footer if exists
 # Available values: left | right | false
-post_navigation: left
+post_navigation: right  # 下一篇文章
 
 
 # ---------------------------------------------------------------
@@ -350,7 +356,7 @@ text_align:
   mobile: justify
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
@@ -358,36 +364,36 @@ android_chrome_color: "#222"
 # Custom Logo (Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.jpg
 
-codeblock:
+codeblock:  #代码块
   # Code Highlight theme
-  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
+  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic | ritboy
   # See: https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: normal
+  highlight_theme: ritboy
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result.
-    show_result: false
+    show_result: true
     # Available values: default | flat | mac
-    style:
+    style: mac
 
-back2top:
+back2top: #返回顶部
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
-reading_progress:
-  enable: false
+reading_progress:  # 阅读的进度
+  enable: true
   # Available values: top | bottom
   position: top
   color: "#37c6c0"
   height: 3px
 
 # Bookmark Support
-bookmark:
+bookmark:  # 右上角 书签
   enable: false
   # Customize the color of the bookmark.
   color: "#222"
@@ -397,8 +403,8 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: false
-  permalink: https://github.com/yourname
+  enable: true
+  permalink: https://github.com/ritboylei
   title: Follow me on GitHub
 
 
@@ -520,7 +526,7 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/theme-next/theme-next-pjax
-pjax: false
+pjax: true
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox
@@ -681,7 +687,7 @@ google_analytics:
   tracking_id: # <app_id>
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
-  only_pageview: false
+  only_pageview: true
 
 # Baidu Analytics
 baidu_analytics: # <app_id>
@@ -719,7 +725,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
@@ -747,7 +753,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -896,7 +902,7 @@ vendors:
   # Internal version: 5.13.0
   # fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css
   # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css
-  fontawesome:
+  fontawesome: //cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css # 看板娘
 
   # MathJax
   # mathjax: //cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -913,7 +919,7 @@ vendors:
 
   # Internal version: 0.2.8
   # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
-  pjax:
+  pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
 
   # FancyBox
   # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
@@ -997,7 +1003,58 @@ vendors:
 
   # Internal version: 1.0.0
   # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
-  canvas_ribbon:
+  canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
+
+# 新增插件
+
+# ---------------------------------------------------------------
+# nofollow插件：减少出站链接能够有效防止权重分散
+# https://blog.skk.moe/post/hexo-filter-nofollow-joined-hexo-official-plugin/
+# npm i hexo-filter-nofollow --save
+# ---------------------------------------------------------------
+nofollow:
+  enable: true  # 是否启用插件，默认值为 true
+  field: site # 插件的处理范围，默认值为 site，可选 post 或 site，post - 仅处理文章内容 site - 处理全站所有页面
+  exclude: # 域名白名单，不同的子域名视为不同的域名
+    - 'exclude1.com'
+    - 'exclude2.com'
+
+# ---------------------------------------------------------------
+# hexo-neat 插件：减少出站链接能够有效防止权重分散
+# https://github.com/rozbo/hexo-neat
+# npm install hexo-neat --save
+# ---------------------------------------------------------------
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+  exclude:
+# 压缩css  
+neat_css:
+  enable: true
+  exclude:
+    - '**/*.min.css'
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
+    - '**/jquery.fancybox.pack.js'
+    - '**/index.js'
+    - '**/fireworks.js'
+
+# ---------------------------------------------------------------
+# hexo-helper-live2d 插件：看板娘
+# https://github.com/EYHN/hexo-helper-live2d
+# https://github.com/stevenjoezhang/live2d-widget
+# npm install hexo-helper-live2d --save
+# ---------------------------------------------------------------
+live2d:
+  enable: enable
 
 # Assets
 css: css

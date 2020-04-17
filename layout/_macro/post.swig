@@ -218,12 +218,16 @@
     {%- if not is_index %}
       {{- next_inject('postBodyEnd') }}
 
-      {%- if post.reward_settings.enable %}
-        {{ partial('_partials/post/post-reward.swig') }}
-      {%- endif %}
-
       {%- if theme.creative_commons.license and theme.creative_commons.post %}
         {{ partial('_partials/post/post-copyright.swig') }}
+      {%- endif %}
+
+      {%- if theme.read_over.enable %}
+        {{ partial('_partials/post/post-readover.swig') }}
+      {%- endif %}
+
+      {%- if post.reward_settings.enable %}
+        {{ partial('_partials/post/post-reward.swig') }}
       {%- endif %}
 
       {%- if theme.follow_me %}
@@ -232,14 +236,16 @@
 
       <footer class="post-footer">
         {%- if post.tags and post.tags.length %}
-          {%- if theme.tag_icon %}
-            {%- set tag_indicate = '<i class="fa fa-tag"></i>' %}
-          {% else %}
-            {%- set tag_indicate = '#' %}
-          {%- endif %}
           <div class="post-tags">
             {%- for tag in post.tags.toArray() %}
-              <a href="{{ url_for(tag.path) }}" rel="tag">{{ tag_indicate }} {{ tag.name }}</a>
+              <a href="{{ url_for(tag.path) }}" rel="tag">
+                {%- if theme.tag_icon.enable %}
+                  <i class="{{ theme.tag_icon.icon }}"></i>
+                {% else %}
+                  #
+                {%- endif %}
+                  {{ tag.name }}
+              </a>
             {%- endfor %}
           </div>
         {%- endif %}

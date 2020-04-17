@@ -56,5 +56,10 @@
   {%- if theme.pjax %}
     </div>
   {%- endif %}
+  
+  {# 看板娘 #}
+  {%- if theme.live2d.enable %}
+    <script src="/live2d-widget/autoload.js"></script>
+  {%- endif %}
 </body>
 </html>

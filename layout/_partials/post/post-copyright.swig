@@ -1,4 +1,4 @@
-<!-- Next 主题默认
+{# Next 主题默认
 {%- set ccIcon = '<i class="fab fa-fw fa-creative-commons"></i>' %}
 {%- set ccText = theme.creative_commons.license | upper %}
 
@@ -18,7 +18,7 @@
   </li>
 </ul>
 </div>
--->
+#}
 
 {%- set ccIcon = '<i class="fab fa-fw fa-creative-commons"></i>' %}
 {%- set ccText = theme.creative_commons.license | upper %}
