@@ -393,7 +393,7 @@ reading_progress:  # 阅读的进度
   height: 3px
 
 # Bookmark Support
-bookmark:  # 右上角 书签
+bookmark:  # 保留阅读进度
   enable: false
   # Customize the color of the bookmark.
   color: "#222"
@@ -477,7 +477,7 @@ exturl: false
 
 # Google Webmaster tools verification.
 # See: https://www.google.com/webmasters
-google_site_verification:
+google_site_verification: ME3msYcybKqnDs44ndmIfn2DaVmb4yp5PI_9FPy6
 
 # Bing Webmaster tools verification.
 # See: https://www.bing.com/webmaster
@@ -489,10 +489,10 @@ yandex_site_verification:
 
 # Baidu Webmaster tools verification.
 # See: https://ziyuan.baidu.com/site
-baidu_site_verification:
+baidu_site_verification: tYbnPEPXVc
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
+baidu_push: true
 
 
 # ---------------------------------------------------------------
@@ -684,13 +684,13 @@ add_this_id:
 
 # Google Analytics
 google_analytics:
-  tracking_id: # <app_id>
+  tracking_id: UA-163895731-1
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
   only_pageview: true
 
 # Baidu Analytics
-baidu_analytics: # <app_id>
+baidu_analytics: a2c1e7007a525ab8670b72d6edb333af
 
 # Growingio Analytics
 growingio_analytics: # <project_id>
