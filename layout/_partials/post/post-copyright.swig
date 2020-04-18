@@ -1,5 +1,5 @@
 {# Next 主题默认
-{%- set ccIcon = '<i class="fab fa-fw fa-creative-commons"></i>' %}
+{%- set ccIcon = '<i class="fa fa-fw fa-creative-commons"></i>' %}
 {%- set ccText = theme.creative_commons.license | upper %}
 
 <div>
@@ -20,7 +20,7 @@
 </div>
 #}
 
-{%- set ccIcon = '<i class="fab fa-fw fa-creative-commons"></i>' %}
+{%- set ccIcon = '<i class="fa fa-fw fa-creative-commons"></i>' %}
 {%- set ccText = theme.creative_commons.license | upper %}
 
 <div class="post-copyright">

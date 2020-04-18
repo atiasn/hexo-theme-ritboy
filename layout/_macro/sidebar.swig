@@ -37,6 +37,15 @@
         {{- next_inject('sidebar') }}
       </div>
 
+      <!-- canvas粒子时钟 -->
+        {% if theme.diy_time.clock %}
+          {{ partial('_custom/clock.swig') }}
+        {% endif %}
+        <!-- 网站运行时间 -->
+        {% if theme.diy_time.runtime.enable %}
+          {{ partial('_custom/runtime.swig') }}
+        {% endif %}
+
       {%- if theme.back2top.enable and theme.back2top.sidebar %}
         <div class="back-to-top motion-element">
           <i class="fa fa-arrow-up"></i>
