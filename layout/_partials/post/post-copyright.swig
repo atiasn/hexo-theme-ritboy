@@ -43,7 +43,7 @@
   </p>
   <p>
     <span>{{ __('post.copyright.update_time.content') + __('symbol.colon') }}</span>
-    {{ page.updated.format(__('post.copyright.update_time.time_format')) }}
+    {{ post.updated.format(__('post.copyright.update_time.time_format')) }}
   </p>
   <p><span>{{ __('post.copyright.link.content') + __('symbol.colon') }}</span>
     <a href="{{ url_for(page.path) }}" title="{{ page.title }}">{{ page.permalink }}</a>
