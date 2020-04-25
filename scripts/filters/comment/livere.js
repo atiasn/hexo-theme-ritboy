@@ -7,11 +7,11 @@ const path = require('path');
 // Add comment
 hexo.extend.filter.register('theme_inject', injects => {
   let theme = hexo.theme.config;
-  if (!theme.livere_uid) return;
+  if (!theme.livere.enable) return;
 
   injects.comment.raw('livere', `
   <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="{{ theme.livere_uid }}"></div>
+    <div id="lv-container" data-id="city" data-uid="{{ theme.livere.uid }}"></div>
   </div>
   `, {}, {cache: true});
 

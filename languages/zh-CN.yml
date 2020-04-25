@@ -46,7 +46,7 @@ post:
       content: 最后更新
       time_format: YYYY年MM月DD日 - HH:mm:ss
     license_title: 版权声明
-    license_content: "本博客所有文章均采用 %s 许可协议。转载请保留原文链接及作者。"
+    license_content: "文章采用 %s 许可协议，转载请保留原文链接及作者。"
 footer:
   powered: "由 %s 强力驱动"
   total_views: 总访问量
